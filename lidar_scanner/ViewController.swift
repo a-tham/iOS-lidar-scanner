@@ -8,23 +8,18 @@
 import UIKit
 import RealityKit
 import ARKit
-import ModelIO
-import MetalKit
 
 class ViewController: UIViewController {
     
-    @IBAction func startRecord(_ sender: UIButton) {
-    }
-    
     @IBOutlet var arView: ARView!
     
-    private let session = AVCaptureSession()
+//    private let session = AVCaptureSession()
     
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        let config = ARWorldTrackingConfiguration()
         arView.automaticallyConfigureSession = false
+        let config = ARWorldTrackingConfiguration()
         config.sceneReconstruction = .meshWithClassification
         config.planeDetection = [.horizontal, .vertical]
         arView.debugOptions.insert(.showSceneUnderstanding)
