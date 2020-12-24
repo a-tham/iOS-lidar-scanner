@@ -13,41 +13,38 @@ import ReplayKit
 class ViewController: UIViewController, ARSessionDelegate, RPPreviewViewControllerDelegate {
     
     @IBOutlet var arView: ARView!
-    let captureSession = AVCaptureSession()
+//    let captureSession = AVCaptureSession()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         arView.session.delegate = self
+        
         arView.automaticallyConfigureSession = false
         let config = ARWorldTrackingConfiguration()
-        config.sceneReconstruction = .mesh
+        config.sceneReconstruction = .meshWithClassification
         config.planeDetection = [.horizontal, .vertical]
         arView.debugOptions.insert(.showSceneUnderstanding)
-        arView.session.run(config)
+//        arView.debugOptions.insert(.showAnchorGeometry)
+        arView.session.run(config, options: [])
     }
         
         func session(_ session: ARSession, didUpdate frame: ARFrame) {
             guard let arCamera = session.currentFrame?.camera else { return }
                 switch arCamera.trackingState {
                     case .notAvailable:
-                        print("Tracking: not available: \(arCamera.trackingState)")
+                        print("Tracking is not available: \(arCamera.trackingState)")
                     case .limited(let reason):
-                        print("Tracking limited: \(reason)")
+                        print("Tracking is currently limited: \(reason)")
                     case .normal:
-                        print("tracking normal: \(arCamera.trackingState)")
+                        print("tracking is normal: \(arCamera.trackingState)")
                 }
-    
-        }
-   
 
-    
-    
-    
-    
+        }
+
 }
+
+
 
 
 

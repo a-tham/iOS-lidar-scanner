@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A20ABEBE25951D8F003465C3 /* ARMeshClassification+Colour.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20ABEBD25951D8F003465C3 /* ARMeshClassification+Colour.swift */; };
 		D60363E32593BEA700795130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D60363E22593BEA700795130 /* Main.storyboard */; };
 		D60BFADE2590E3EF00E8FE85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BFADD2590E3EF00E8FE85 /* AppDelegate.swift */; };
 		D60BFAE02590E3EF00E8FE85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BFADF2590E3EF00E8FE85 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A20ABEBD25951D8F003465C3 /* ARMeshClassification+Colour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARMeshClassification+Colour.swift"; sourceTree = "<group>"; };
 		D60363E22593BEA700795130 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D60BFADA2590E3EF00E8FE85 /* lidar_scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lidar_scanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60BFADD2590E3EF00E8FE85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A20ABEEE25951DB5003465C3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A20ABEBD25951D8F003465C3 /* ARMeshClassification+Colour.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D60BFAD12590E3EF00E8FE85 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +132,7 @@
 		D60BFADC2590E3EF00E8FE85 /* lidar_scanner */ = {
 			isa = PBXGroup;
 			children = (
+				A20ABEEE25951DB5003465C3 /* Extensions */,
 				A20ABEAB2594ED45003465C3 /* Model */,
 				A20ABEA12594EC9A003465C3 /* Controller */,
 				A20ABEA52594ECA9003465C3 /* View */,
@@ -283,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D60BFAE02590E3EF00E8FE85 /* ViewController.swift in Sources */,
+				A20ABEBE25951D8F003465C3 /* ARMeshClassification+Colour.swift in Sources */,
 				D60BFADE2590E3EF00E8FE85 /* AppDelegate.swift in Sources */,
 				D60BFAE22590E3EF00E8FE85 /* Experience.rcproject in Sources */,
 			);
