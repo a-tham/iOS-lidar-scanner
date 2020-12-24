@@ -8,10 +8,9 @@
 import UIKit
 import RealityKit
 import ARKit
+import ReplayKit
 
-let cameraBrain = CameraBrain()
-
-class ViewController: UIViewController,  ARSessionDelegate {
+class ViewController: UIViewController, ARSessionDelegate, RPPreviewViewControllerDelegate {
     
     @IBOutlet var arView: ARView!
     let captureSession = AVCaptureSession()
@@ -19,11 +18,13 @@ class ViewController: UIViewController,  ARSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         arView.session.delegate = self
         arView.automaticallyConfigureSession = false
         let config = ARWorldTrackingConfiguration()
         config.sceneReconstruction = .mesh
-//        config.planeDetection = [.horizontal, .vertical]
+        config.planeDetection = [.horizontal, .vertical]
         arView.debugOptions.insert(.showSceneUnderstanding)
         arView.session.run(config)
     }
@@ -37,8 +38,15 @@ class ViewController: UIViewController,  ARSessionDelegate {
                         print("Tracking limited: \(reason)")
                     case .normal:
                         print("tracking normal: \(arCamera.trackingState)")
+                }
+    
         }
-    }
+   
+
+    
+    
+    
+    
 }
 
 
