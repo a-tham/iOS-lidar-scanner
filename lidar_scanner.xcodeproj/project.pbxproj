@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A20ABEA72594ED0C003465C3 /* CameraBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20ABEA62594ED0C003465C3 /* CameraBrain.swift */; };
 		D60363E32593BEA700795130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D60363E22593BEA700795130 /* Main.storyboard */; };
 		D60BFADE2590E3EF00E8FE85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BFADD2590E3EF00E8FE85 /* AppDelegate.swift */; };
 		D60BFAE02590E3EF00E8FE85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BFADF2590E3EF00E8FE85 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A20ABEA62594ED0C003465C3 /* CameraBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraBrain.swift; sourceTree = "<group>"; };
 		D60363E22593BEA700795130 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D60BFADA2590E3EF00E8FE85 /* lidar_scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lidar_scanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60BFADD2590E3EF00E8FE85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A20ABEA12594EC9A003465C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D60BFADF2590E3EF00E8FE85 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A20ABEA52594ECA9003465C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D60363E22593BEA700795130 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A20ABEAB2594ED45003465C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A20ABEA62594ED0C003465C3 /* CameraBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D60BFAD12590E3EF00E8FE85 = {
 			isa = PBXGroup;
 			children = (
@@ -99,11 +125,12 @@
 		D60BFADC2590E3EF00E8FE85 /* lidar_scanner */ = {
 			isa = PBXGroup;
 			children = (
+				A20ABEAB2594ED45003465C3 /* Model */,
+				A20ABEA12594EC9A003465C3 /* Controller */,
+				A20ABEA52594ECA9003465C3 /* View */,
 				D60BFADD2590E3EF00E8FE85 /* AppDelegate.swift */,
-				D60BFADF2590E3EF00E8FE85 /* ViewController.swift */,
 				D60BFAE12590E3EF00E8FE85 /* Experience.rcproject */,
 				D60BFAE62590E3F000E8FE85 /* Assets.xcassets */,
-				D60363E22593BEA700795130 /* Main.storyboard */,
 				D60BFAE82590E3F000E8FE85 /* LaunchScreen.storyboard */,
 				D60BFAEB2590E3F000E8FE85 /* Info.plist */,
 			);
@@ -259,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D60BFAE02590E3EF00E8FE85 /* ViewController.swift in Sources */,
+				A20ABEA72594ED0C003465C3 /* CameraBrain.swift in Sources */,
 				D60BFADE2590E3EF00E8FE85 /* AppDelegate.swift in Sources */,
 				D60BFAE22590E3EF00E8FE85 /* Experience.rcproject in Sources */,
 			);
